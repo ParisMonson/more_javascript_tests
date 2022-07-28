@@ -8,8 +8,10 @@ class ShoppingBasket {
   getTotalPrice() {
     let total = 0;
     this.cart.forEach((item) => {
-      total += item.price;
+      total += item.getPrice();
     });
     return total;
   }
 }
+
+module.exports = ShoppingBasket;
